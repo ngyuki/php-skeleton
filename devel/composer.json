@@ -1,0 +1,14 @@
+{
+    "repositories": [
+        {
+            "packagist": false
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/ngyuki/php-skeleton.git"
+        }
+    ],
+    "require": {
+        "ngyuki/php-skeleton": "dev-master"
+    }
+}
