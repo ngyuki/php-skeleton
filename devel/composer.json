@@ -5,7 +5,7 @@
         },
         {
             "type": "git",
-            "url": "https://github.com/ngyuki/php-skeleton.git"
+            "url": "git@bitbucket.org:ngyuki/skeleton-php.git"
         }
     ],
     "require": {
