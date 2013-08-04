@@ -9,13 +9,13 @@
         <env name="PHPUNIT_GID"  value="10" />
         <env name="PHPUNIT_NONE" value="xxxxx" />
     --></php>
-    
+
     <testsuites>
         <testsuite name="tests">
             <directory>./tests/</directory>
         </testsuite>
     </testsuites>
-    
+
     <filter>
         <whitelist>
         	<directory suffix=".php">./src/</directory>

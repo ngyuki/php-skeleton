@@ -6,18 +6,18 @@
     "homepage": "https://github.com/ngyuki/php-skeleton",
     "license": "MIT",
     "authors": [
-        { "name": "tsyk goto", "email": "ngyuki.ts@gmail.com" }
+        { "name": "ngyuki", "email": "ngyuki.ts@gmail.com" }
     ],
+    "autoload": {
+        "psr-0": {
+            "ngyuki\\Skeleton": "src/"
+        }
+    },
     "repositories": [
         { "packagist": false }
     ],
     "require": {
         "php": ">=5.3.3",
-        "ext-posix": "*"
-    },
-    "autoload": {
-        "psr-0": {
-            "ngyuki\\Skeleton": "src/"
-        }
+        "ext-pecl": "*"
     }
 }

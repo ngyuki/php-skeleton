@@ -1,12 +1,10 @@
 <?php
-namespace ngyuki\Tests;
+namespace Tests;
 
 use ngyuki\Skeleton\Sample;
 
 /**
- *
- * @author ng
- *
+ * @author ngyuki
  */
 class SkeletonTest extends \PHPUnit_Framework_TestCase
 {
@@ -18,7 +16,7 @@ class SkeletonTest extends \PHPUnit_Framework_TestCase
         $argv = array(__FILE__);
         Sample::main(count($argv), $argv);
     }
-    
+
     /**
      * @test
      */
