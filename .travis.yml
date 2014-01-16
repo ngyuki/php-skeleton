@@ -1,19 +1,21 @@
 language: php
 
 php:
+  - 5.3.3
   - 5.3
   - 5.4
   - 5.5
 
 before_install:
-  - sudo groupadd -g 12345 piyo
-  - sudo useradd -u 23456 -g piyo hoge
-
-before_script:
-  - composer install
+  - composer self-update
+  - composer install --dev --prefer-source
+  - mkdir -p build/logs
 
 script:
-  - PHPUNIT_USER=hoge PHPUNIT_UID=23456 PHPUNIT_GID=12345 PHPUNIT_NONE=xxxxx phpunit --colors --coverage-text
+  - phpunit --colors --coverage-text --coverage-clover build/logs/clover.xml
+
+after_success:
+  - vendor/bin/coveralls -v
 
 branches:
   except:

@@ -1,16 +1,16 @@
 {
     "name": "ngyuki/php-skeleton",
-    "type": "library",
     "description": "php-skeleton",
-    "keywords": [],
+    "type": "library",
+    "keywords": [ "skeleton" ],
     "homepage": "https://github.com/ngyuki/php-skeleton",
     "license": "MIT",
     "authors": [
         { "name": "ngyuki", "email": "ngyuki.ts@gmail.com" }
     ],
     "autoload": {
-        "psr-0": {
-            "ngyuki\\Skeleton": "src/"
+        "psr-4": {
+            "ngyuki\\Skeleton\\": "src/"
         }
     },
     "repositories": [
@@ -20,7 +20,15 @@
         "php": ">=5.3.3",
         "ext-pcre": "*"
     },
+    "require-dev": {
+        "satooshi/php-coveralls": "dev-master"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
     "bin": [
-        "bin/skeleton"
+        "bin/ngyuki-php-skeleton"
     ]
 }

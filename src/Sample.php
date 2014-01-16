@@ -18,9 +18,11 @@ class Sample
 {
     public static function main($argc, $argv)
     {
+        return 0;
     }
 
-    public function func()
+    public function add($a, $b)
     {
+        return $a + $b;
     }
 }
