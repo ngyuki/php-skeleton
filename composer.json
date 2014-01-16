@@ -13,9 +13,6 @@
             "ngyuki\\Skeleton\\": "src/"
         }
     },
-    "repositories": [
-        { "packagist": false }
-    ],
     "require": {
         "php": ">=5.3.3",
         "ext-pcre": "*"
