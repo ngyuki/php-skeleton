@@ -15,11 +15,11 @@
     },
     "config": {
         "platform": {
-            "php": "5.3.3"
+            "php": "5.4.16"
         }
     },
     "require": {
-        "php": ">=5.3.3",
+        "php": ">=5.4.16",
         "ext-pcre": "*"
     },
     "require-dev": {
