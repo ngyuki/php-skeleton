@@ -1,6 +1,8 @@
 PHP Skeleton
 ================================================================================
 
+[![Build Status](https://travis-ci.org/ngyuki/php-skeleton.svg?branch=master)](https://travis-ci.org/ngyuki/php-skeleton)
+
 Requirements
 --------------------------------------------------------------------------------
 
