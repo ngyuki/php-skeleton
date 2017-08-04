@@ -27,6 +27,6 @@
         }
     },
     "bin": [
-        "bin/ngyuki-php-skeleton"
+        "bin/skeleton"
     ]
 }
