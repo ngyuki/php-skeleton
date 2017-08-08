@@ -13,7 +13,7 @@ before_install:
   - mkdir -p build/logs
 
 script:
-  - phpunit --colors --coverage-text --coverage-clover build/logs/clover.xml
+  - vendor/bin/phpunit --colors --coverage-text --coverage-clover build/logs/clover.xml
 
 after_success:
   - travis_retry vendor/bin/coveralls -v
