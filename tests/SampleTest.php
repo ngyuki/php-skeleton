@@ -1,5 +1,5 @@
 <?php
-namespace Tests;
+namespace ngyuki\Skeleton\Tests;
 
 use ngyuki\Skeleton\Sample;
 
