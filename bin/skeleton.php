@@ -3,6 +3,7 @@ $loader = null;
 
 foreach (array(__DIR__ . '/../../../autoload.php', __DIR__ . '/../vendor/autoload.php') as $fn) {
     if (file_exists($fn)) {
+        /** @noinspection PhpIncludeInspection */
         $loader = require $fn;
         break;
     }
