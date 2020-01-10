@@ -1,4 +1,5 @@
 /build/
 /vendor/
+/tools/
 /phpunit.xml
 /.php_cs.cache
