@@ -3,25 +3,27 @@ language: php
 sudo: false
 
 php:
-  - 5.4
-  - 5.5
-  - 5.6
-  - 7.0
-  - 7.1
+  - 7.2
+  - 7.3
+  - 7.4
 
 cache:
   directories:
-    - $HOME/.composer/cache
+    - $HOME/.composer/cache/
+    - $HOME/.phive/
 
 before_install:
+  - test -e "$HOME/.phive/phive.phar" ||
+      ( wget -O phive.phar "https://phar.io/releases/phive.phar" && mv -f phive.phar "$HOME/.phive/" )
+  - yes | php "$HOME/.phive/phive.phar" install
   - composer install --prefer-dist
-  - mkdir -p build/logs
+  - mkdir -p build/logs/
 
 script:
-  - vendor/bin/phpunit --colors --coverage-text --coverage-clover build/logs/clover.xml
+  - tools/phpunit --colors --coverage-text --coverage-clover build/logs/clover.xml
 
 after_success:
-  - travis_retry vendor/bin/coveralls -v
+  - travis_retry tools/php-coveralls -v
 
 branches:
   except:

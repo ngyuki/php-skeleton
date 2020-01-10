@@ -18,7 +18,6 @@
         "ext-pcre": "*"
     },
     "require-dev": {
-        "satooshi/php-coveralls": "*"
     },
     "autoload": {
         "psr-4": {
