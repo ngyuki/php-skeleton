@@ -44,6 +44,11 @@
         ],
         "phan": [
             "@php tools/phan -p --color"
+        ],
+        "qa": [
+            "@composer cs",
+            "@composer phan",
+            "@composer test"
         ]
     }
 }
