@@ -10,11 +10,11 @@
     ],
     "config": {
         "platform": {
-            "php": "5.4.16"
+            "php": "7.2"
         }
     },
     "require": {
-        "php": ">=5.4.16",
+        "php": "^7.2",
         "ext-pcre": "*"
     },
     "require-dev": {
