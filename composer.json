@@ -18,7 +18,6 @@
         "ext-pcre": "*"
     },
     "require-dev": {
-        "phpunit/phpunit": "*",
         "satooshi/php-coveralls": "*"
     },
     "autoload": {
@@ -33,5 +32,13 @@
     },
     "bin": [
         "bin/skeleton"
-    ]
+    ],
+    "scripts": {
+        "test": [
+            "@php tools/phpunit --colors=always"
+        ],
+        "coverage": [
+            "@php tools/phpunit --colors=always --coverage-html coverage"
+        ]
+    }
 }

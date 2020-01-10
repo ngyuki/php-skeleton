@@ -2,11 +2,14 @@
 namespace ngyuki\Skeleton\Tests;
 
 use ngyuki\Skeleton\Sample;
+use PHPUnit\Framework\TestCase;
+use function PHPUnit\assertEquals;
+use function PHPUnit\assertFalse;
 
 /**
  * @author ngyuki
  */
-class SkeletonTest extends \PHPUnit_Framework_TestCase
+class SkeletonTest extends TestCase
 {
     /**
      * @test
