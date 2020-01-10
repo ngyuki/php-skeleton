@@ -2,4 +2,5 @@
 <phive xmlns="https://phar.io/phive">
   <phar name="phpunit" version="^8.5.2" installed="8.5.2" location="./tools/phpunit" copy="false"/>
   <phar name="php-coveralls" version="^2.2.0" installed="2.2.0" location="./tools/php-coveralls" copy="false"/>
+  <phar name="php-cs-fixer" version="^2.16.1" installed="2.16.1" location="./tools/php-cs-fixer" copy="false"/>
 </phive>

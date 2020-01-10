@@ -20,6 +20,7 @@ before_install:
   - mkdir -p build/logs/
 
 script:
+  - tools/php-cs-fixer fix --dry-run --diff --ansi -v
   - tools/phpunit --colors --coverage-text --coverage-clover build/logs/clover.xml
 
 after_success:
