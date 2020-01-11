@@ -11,10 +11,13 @@
     "config": {
         "platform": {
             "php": "7.2"
-        }
+        },
+        "preferred-install": "dist",
+        "sort-packages": true
     },
     "require": {
         "php": "^7.2",
+        "ext-simplexml": "*",
         "ext-pcre": "*"
     },
     "require-dev": {
@@ -45,10 +48,14 @@
         "phan": [
             "@php tools/phan -p --color"
         ],
+        "composer-require-checker": [
+            "@php tools/composer-require-checker --ansi -vvv"
+        ],
         "qa": [
             "@composer cs",
             "@composer phan",
-            "@composer test"
+            "@composer test",
+            "@composer composer-require-checker"
         ]
     }
 }

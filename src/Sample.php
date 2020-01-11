@@ -12,4 +12,15 @@ class Sample
     {
         return $a + $b;
     }
+
+    public function match($p, $s)
+    {
+        return preg_match($p, $s);
+    }
+
+    public function xml($file)
+    {
+        $xml = simplexml_load_file($file);
+        assert($xml instanceof \SimpleXMLElement);
+    }
 }
