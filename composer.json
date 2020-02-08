@@ -6,7 +6,7 @@
     "homepage": "https://github.com/ngyuki/php-skeleton",
     "license": "MIT",
     "authors": [
-        { "name": "ngyuki", "email": "ngyuki.jp@gmail.com" }
+        { "name": "Toshiyuki Goto", "email": "ngyuki.jp@gmail.com" }
     ],
     "config": {
         "platform": {
