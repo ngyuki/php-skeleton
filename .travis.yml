@@ -13,15 +13,14 @@ cache:
     - $HOME/.phive/
 
 before_install:
-  - test -e "$HOME/.phive/phive.phar" ||
-      ( wget -O phive.phar "https://phar.io/releases/phive.phar" && mv -f phive.phar "$HOME/.phive/" )
-  - yes | php "$HOME/.phive/phive.phar" install
-  - composer install --prefer-dist
+  - composer install --prefer-dist --no-progress --no-suggest
   - mkdir -p build/logs/
 
 script:
-  - tools/php-cs-fixer fix --dry-run --diff --ansi -v
-  - tools/phpunit --colors --coverage-text --coverage-clover build/logs/clover.xml
+  - vendor/bin/php-cs-fixer.phar fix --dry-run --diff --ansi -v
+  - vendor/bin/phan.phar --no-progress-bar --color --allow-polyfill-parser
+  - vendor/bin/composer-require-checker.phar --ansi -vvv
+  - vendor/bin/phpunit.phar --colors --coverage-text --coverage-clover build/logs/clover.xml
 
 after_success:
   - travis_retry tools/php-coveralls -v

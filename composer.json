@@ -6,14 +6,18 @@
     "homepage": "https://github.com/ngyuki/php-skeleton",
     "license": "MIT",
     "authors": [
-        { "name": "ngyuki", "email": "ngyuki.jp@gmail.com" }
+        { "name": "Toshiyuki Goto", "email": "ngyuki.jp@gmail.com" }
     ],
     "config": {
-        "platform": {
-            "php": "7.2"
-        },
+        "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true
+    },
+    "repositories": {
+        "pharhub": {
+            "type": "composer",
+            "url": "https://packages.pharhub.dev/"
+        }
     },
     "require": {
         "php": "^7.2",
@@ -21,6 +25,11 @@
         "ext-pcre": "*"
     },
     "require-dev": {
+        "pharhub/composer-require-checker": "^2.1",
+        "pharhub/phan": "^3.2",
+        "pharhub/php-coveralls": "^2.4",
+        "pharhub/php-cs-fixer": "^2.17",
+        "pharhub/phpunit": "^8.5"
     },
     "autoload": {
         "psr-4": {
@@ -37,19 +46,22 @@
     ],
     "scripts": {
         "test": [
-            "@php tools/phpunit --colors=always"
+            "@php vendor/bin/phpunit.phar --colors=always"
         ],
         "coverage": [
-            "@php tools/phpunit --colors=always --coverage-html coverage"
+            "@php vendor/bin/phpunit.phar --colors=always --coverage-html coverage"
         ],
         "cs": [
-            "@php tools/php-cs-fixer fix --dry-run --diff --ansi -v"
+            "@php vendor/bin/php-cs-fixer.phar fix --dry-run --diff --ansi -v"
+        ],
+        "fix": [
+            "@php vendor/bin/php-cs-fixer.phar fix --diff --ansi -v"
         ],
         "phan": [
-            "@php tools/phan -p --color"
+            "@php vendor/bin/phan.phar -p --color"
         ],
         "composer-require-checker": [
-            "@php tools/composer-require-checker --ansi -vvv"
+            "@php vendor/bin/composer-require-checker.phar --ansi -vvv"
         ],
         "qa": [
             "@composer cs",
