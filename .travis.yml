@@ -26,5 +26,5 @@ after_success:
   - travis_retry tools/php-coveralls -v
 
 branches:
-  except:
-    - /\//
+  only:
+    - master
