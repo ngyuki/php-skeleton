@@ -10,20 +10,18 @@ php:
 cache:
   directories:
     - $HOME/.composer/cache/
-    - $HOME/.phive/
 
 before_install:
   - composer install --prefer-dist --no-progress --no-suggest
   - mkdir -p build/logs/
 
 script:
-  - vendor/bin/php-cs-fixer.phar fix --dry-run --diff --ansi -v
-  - vendor/bin/phan.phar --no-progress-bar --color --allow-polyfill-parser
-  - vendor/bin/composer-require-checker.phar --ansi -vvv
-  - vendor/bin/phpunit.phar --colors --coverage-text --coverage-clover build/logs/clover.xml
+  - vendor/bin/php-cs-fixer fix --dry-run --diff --ansi -v
+  - vendor/bin/phan --no-progress-bar --color --allow-polyfill-parser
+  - vendor/bin/phpunit --colors --coverage-text --coverage-clover build/logs/clover.xml
 
 after_success:
-  - travis_retry tools/php-coveralls -v
+  - travis_retry vendor/bin/php-coveralls -v
 
 branches:
   only:

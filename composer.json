@@ -13,23 +13,16 @@
         "preferred-install": "dist",
         "sort-packages": true
     },
-    "repositories": {
-        "pharhub": {
-            "type": "composer",
-            "url": "https://packages.pharhub.dev/"
-        }
-    },
     "require": {
         "php": "^7.2",
         "ext-simplexml": "*",
         "ext-pcre": "*"
     },
     "require-dev": {
-        "pharhub/composer-require-checker": "^2.1",
-        "pharhub/phan": "^3.2",
-        "pharhub/php-coveralls": "^2.4",
-        "pharhub/php-cs-fixer": "^2.17",
-        "pharhub/phpunit": "^8.5"
+        "friendsofphp/php-cs-fixer": "^2.17",
+        "phan/phan": "^4.0",
+        "php-coveralls/php-coveralls": "^2.4",
+        "phpunit/phpunit": "^8.5"
     },
     "autoload": {
         "psr-4": {
@@ -46,28 +39,24 @@
     ],
     "scripts": {
         "test": [
-            "@php vendor/bin/phpunit.phar --colors=always"
+            "@php vendor/bin/phpunit --colors=always"
         ],
         "coverage": [
-            "@php vendor/bin/phpunit.phar --colors=always --coverage-html coverage"
+            "@php vendor/bin/phpunit --colors=always --coverage-html coverage"
         ],
         "cs": [
-            "@php vendor/bin/php-cs-fixer.phar fix --dry-run --diff --ansi -v"
+            "@php vendor/bin/php-cs-fixer fix --dry-run --diff --ansi -v"
         ],
         "fix": [
-            "@php vendor/bin/php-cs-fixer.phar fix --diff --ansi -v"
+            "@php vendor/bin/php-cs-fixer fix --diff --ansi -v"
         ],
         "phan": [
-            "@php vendor/bin/phan.phar -p --color"
-        ],
-        "composer-require-checker": [
-            "@php vendor/bin/composer-require-checker.phar --ansi -vvv"
+            "@php vendor/bin/phan -p --color"
         ],
         "qa": [
             "@composer cs",
             "@composer phan",
-            "@composer test",
-            "@composer composer-require-checker"
+            "@composer test"
         ]
     }
 }

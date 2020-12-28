@@ -34,10 +34,8 @@ jobs:
         with:
           dependency-versions: ${{ matrix.dependencies }}
 
-      - run: vendor/bin/phpunit.phar --colors=always
+      - run: vendor/bin/phpunit --colors=always
 
-      - run: vendor/bin/php-cs-fixer.phar fix --dry-run --diff --ansi -v
+      - run: vendor/bin/php-cs-fixer fix --dry-run --diff --ansi -v
 
-      - run: vendor/bin/phan.phar --no-progress-bar --color
-
-      - run: vendor/bin/composer-require-checker.phar --ansi -vvv
+      - run: vendor/bin/phan --no-progress-bar --color
