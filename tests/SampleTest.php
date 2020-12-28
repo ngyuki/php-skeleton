@@ -3,8 +3,8 @@ namespace ngyuki\Skeleton\Tests;
 
 use ngyuki\Skeleton\Sample;
 use PHPUnit\Framework\TestCase;
-use function PHPUnit\assertEquals;
-use function PHPUnit\assertFalse;
+use function assertEquals;
+use function assertFalse;
 
 /**
  * @author ngyuki
